@@ -1,0 +1,26 @@
+[ {
+  "name" : "VENKAT",
+  "relianceShares" : 26,
+  "hdfcShares" : 70,
+  "iciciShares" : 30
+}, {
+  "name" : "RAM",
+  "relianceShares" : 40,
+  "hdfcShares" : 56,
+  "iciciShares" : 23
+}, {
+  "name" : "KRISH",
+  "relianceShares" : 35,
+  "hdfcShares" : 32,
+  "iciciShares" : 31
+}, {
+  "name" : "SHAM",
+  "relianceShares" : 15,
+  "hdfcShares" : 7,
+  "iciciShares" : 6
+}, {
+  "name" : "RAJU",
+  "relianceShares" : 10,
+  "hdfcShares" : 20,
+  "iciciShares" : 35
+} ]
