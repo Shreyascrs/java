@@ -14,7 +14,7 @@ public class Regex {
 	public static void main(String[] args) throws Exception {
 		Scanner scan=new Scanner(System.in);
 		Userinput input=new Userinput();
-		String path="/home/admin1/Desktop/input/regexinput.txt";
+		String path="/home/admin1/Desktop/input/regexinput.txt";	// path to read the file
 		File file=new File(path);
 		String data="";
 		String name1="";
@@ -31,7 +31,7 @@ public class Regex {
 		
 			do {
 			name1=scan.next();
-			}while(!name1.matches("[a-zA-Z],"));
+			}while(!name1.matches("[a-zA-Z],")); 	// to verify the name
 		
 		
 		input.setFirstname(name1);
@@ -46,21 +46,27 @@ public class Regex {
 		input.setLastname(name2);
 		System.out.println("enter the mobile number");
 		phone=scan.next();
-		if(Utilityjson.validate(phone)==true)
+		if(Utilityjson.validate(phone)==true)  // to verify mobile number
 		{
 		input.setMobileno(scan.next());
 		}else
 		{
-			System.out.println("invalid phone number");
+			System.out.println("invalid phone number"); 
 		}
 		Date date=new Date();
-		String dat=DateFormat.getInstance().format(date);
+		String dat=DateFormat.getInstance().format(date); 
 		input.setDate(dat);
 		
 		String message = convertstring(input,data);
 		System.out.println(message);
 		
 	}
+	/**
+	 *  to modify the message and to add name and details
+	 * @param input
+	 * @param data
+	 * @return
+	 */
 	public static String convertstring(Userinput input,String data) {
 		
 		Pattern p=Pattern.compile("<<name>>");

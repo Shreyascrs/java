@@ -2,6 +2,7 @@ package com.bridgelabz.json.commercialdata;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +11,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class StockAccount implements StockInterface {
 
+	
+	Stack stack = new Stack(100);
+	LinkedList ls = new LinkedList();
+	StackList ls1 = new StackList();
+	Queue queue = new Queue(100);
+	QueueList ls2 = new QueueList();
+
+	
 	public static ObjectMapper objM = new ObjectMapper();
 	File customerFile = new File("/home/admin1/Desktop/projects/Bridgelabzprograms/input/Customer.json");
 	File compSharesFile = new File("/home/admin1/Desktop/projects/Bridgelabzprograms/input/Company_Shares.json");
@@ -120,6 +129,31 @@ public class StockAccount implements StockInterface {
 					"ICICI(Shares)");
 			System.out.println("-------------------------------------------------------------------");
 			System.out.println(customerList.get(custIndex).toString());
+			
+			System.out.println("==================In LIST==================");
+			//ls.add(companyShares);
+			System.out.println("Company Shares in LIST:");
+		
+			ls.print();
+		
+			System.out.println("---------------------------------------------");
+			stack.push(stackSymbol);
+			System.out.println("Company Symbol in STACK LIST:");
+			ls1.print();
+			System.out.println("-------------------------------------------");
+
+			String str = "";
+			Date currentDate = new Date();
+			str = currentDate.toString();
+			queue.enqueue(str);
+			// System.out.println("Date in QueueList:");
+
+			queue.push(str);
+			ls2.print();
+			System.out.println("");
+
+			// System.out.println("Queue LIST");
+			// ls2.print();
 		}
 		catch(Exception e)
 		{
@@ -186,6 +220,28 @@ public class StockAccount implements StockInterface {
 					"ICICI(Shares)");
 			System.out.println("----------------------------------------------------------------------");
 			System.out.println(customerList.get(custIndex).toString());
+System.out.println("==================In LIST==================");
+			
+			System.out.println("Company Shares in LIST:");
+		
+			ls.print();
+			
+			System.out.println("---------------------------------------------");
+			stack.push(stackSymbol);
+			System.out.println("Company Symbol in STACK LIST:");
+			ls1.print();
+			System.out.println("-------------------------------------------");
+
+			String str = "";
+			Date currentDate = new Date();
+			str = currentDate.toString();
+			queue.enqueue(str);
+			// System.out.println("Date in QueueList:");
+
+			queue.push(str);
+			
+			ls2.print();
+			System.out.println("");
 		}
 		catch(Exception e)
 		{

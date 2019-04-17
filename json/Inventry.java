@@ -12,9 +12,13 @@ import org.codehaus.jackson.map.ObjectMapper;
  * @version	:jackson 1x
  * @date	:09/04/2019
  */
+
 @SuppressWarnings("serial")
+
 public class Inventry implements Serializable {
+	
 public static void main(String[] args)  {
+	
 	Scanner scan=new Scanner(System.in);		
 							
 	String path="/home/admin1/Desktop/input/jsoninput.json";	// source file path contain json data

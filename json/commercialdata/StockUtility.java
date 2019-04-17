@@ -17,7 +17,7 @@ public class StockUtility {
 	 */
 	public static void addAccount(String fileName)
 	{
-		fileName = "/home/admin1/eclipse-workspace/jsonfiles/"
+		fileName = "/home/admin1/Desktop/projects/Bridgelabzprograms/input/"
 					+ fileName;
 		Scanner sc=new Scanner(System.in);
 		try 
